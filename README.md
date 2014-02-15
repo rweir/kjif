@@ -5,7 +5,9 @@ machines.
 
 ## Installation
 
-Download from https://github.com/rweir/kjif
+Download from https://github.com/rweir/kjif , assuming
+[![Build Status](https://travis-ci.org/rweir/kjif.png?branch=master)](https://travis-ci.org/rweir/kjif)
+is green.
 
 ## Usage
 
