@@ -13,7 +13,8 @@
   "Set a dark feature to a particular value"
   [data]
   (println (format "Setting a dark feature value" (:hostname data) data))
-  (assoc-in data [:set-dark-feature "feature"] "XXX"))
+  (assoc-in data [:set-dark-feature "feature"] "XXX")
+  data)
 
 (ann get-dark-feature PassMap)
 (defn get-dark-feature
