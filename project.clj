@@ -8,6 +8,7 @@
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
                  [org.clojure/core.typed "0.2.30"]]
   :plugins [[lein-typed "0.3.1"]]
+  :core.typed {:check [kjif.core]}
   :main ^:skip-aot kjif.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
