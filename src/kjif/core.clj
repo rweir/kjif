@@ -1,6 +1,7 @@
 (ns kjif.core
   (:require
-   [clojure.core.typed :refer [ann check-ns def-alias Map]])
+   [clojure.core.typed :refer [ann check-ns def-alias Map]]
+   [clojure.pprint :refer [pprint]])
   (:gen-class))
 
 (def-alias Hostname String)
@@ -12,7 +13,7 @@
   "Set a dark feature to a particular value"
   [data]
   (println (format "Setting a dark feature value" (:hostname data) data))
-  data)
+  (assoc-in data [:set-dark-feature "feature"] "XXX"))
 
 (ann get-dark-feature PassMap)
 (defn get-dark-feature
@@ -26,12 +27,12 @@
   "Run the provided set of steps"
   [& args]
   (let [hosts [{:hostname "foo.atlassian.net"} {:hostname "bar.atlassian.net"}]]
-    (doall (map (fn [host]
-            (-> host
-                (set-dark-feature)
-                (get-dark-feature)
-                (println)))
-          hosts))))
+    (let [results (map (fn [host]
+                         (-> host
+                             (set-dark-feature)
+                             (get-dark-feature)))
+                       hosts)]
+          (pprint results))))
 
 (comment
   (check-ns)
