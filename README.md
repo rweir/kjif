@@ -1,36 +1,19 @@
 # kjif
 
-FIXME: description
+Library for parallelising sysadmin-y tasks across large swathes of
+machines.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://github.com/rweir/kjif
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar kjif-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ java -jar kjif-0.1.0-standalone.jar job.clj
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Rob Weir <rweir@ertius.org>
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
