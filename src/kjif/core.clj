@@ -47,7 +47,7 @@
 (defn -main
   "Run the provided set of steps"
   [& args]
-  (let [hosts [{:hostname "foo.atlassian.net"} {:hostname "bar.atlassian.net"}]]
+  (let [hosts [{:hostname "foo.example.net"} {:hostname "bar.example.net"}]]
     (let [steps [set-dark-feature get-dark-feature]
           results (doit hosts steps)]
       (pprint results))))
